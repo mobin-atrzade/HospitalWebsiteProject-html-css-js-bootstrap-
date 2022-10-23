@@ -1,3 +1,4 @@
+/* ========================== Fonts  */
 @font-face {
   font-family: vazir;
   src: url("../fonts/Vazirmatn-Regular.woff2") format("woff2");
@@ -10,3 +11,123 @@
   font-weight: bold;
 }
 
+body {
+  font-family: vazir;
+}
+
+/* ========================== CSS Variables */
+
+:root {
+  --blue-light: #007dfe;
+  --blue-dark: #4d63dd;
+  --blue-dark-2: #0137a4;
+}
+
+/* ========================== CSS Reset */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* ========================== Btn Round */
+.btn-round a {
+  background-color: var(--blue-dark-2);
+  font-size: 1.5rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 0.4rem 0.6rem 0.4rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-round span {
+  margin-left: 1rem;
+}
+
+.btn-round i {
+  vertical-align: middle;
+  background-color: var(--blue-dark);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  transition: all 0.3s ease;
+}
+
+.btn-round a:hover {
+  background-color: var(--blue-dark);
+}
+
+.btn-round a:hover i {
+  background-color: var(--blue-dark-2);
+}
+
+/* ========================== Header Main  */
+
+.header-main {
+  background-image: url("../images/header/bg-header.jpg");
+  background-position: center top;
+  background-size: cover;
+  padding: 3rem 0;
+  height: 60rem;
+}
+.header-main__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header-main__menu {
+  background-color: #fff;
+  box-shadow: 0 4px 14px rgba(5, 81, 81, 0.07);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.header-main__menu-brand a img {
+  width: 10rem;
+}
+.header-main__menu-list > ul {
+  display: flex;
+  align-items: center;
+}
+.header-main__menu-list > ul > li {
+  position: relative;
+  margin-left: 4rem;
+  padding: 1.7rem 0;
+}
+.header-main__menu-list > ul > li > a {
+  font-size: 1.5rem;
+  color: #001b24;
+  position: relative;
+}
+
+/* ======================== Header Content */
+.header-main__content {
+}
+.header-main__content-box {
+}
+.header-main__content-title {
+}
+.header-main__content-desc {
+}
+.btn-main {
+}
