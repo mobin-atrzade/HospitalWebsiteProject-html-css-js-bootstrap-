@@ -124,7 +124,7 @@ html {
 .header-main__menu {
   background-color: #fff;
   box-shadow: 0 4px 14px rgba(5, 81, 81, 0.07);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
 }
 .header-main__menu-brand a img {
@@ -139,10 +139,89 @@ html {
   margin-left: 4rem;
   padding: 1.7rem 0;
 }
-.header-main__menu-list > ul > li > a {
+.header-main__menu-list ul li a {
   font-size: 1.5rem;
   color: #001b24;
   position: relative;
+  transition: color 0.3s ease;
+}
+.header-main__menu-list > ul > li:hover > a {
+  color: var(--blue-light);
+}
+.header-main__menu-list > ul > li::after {
+  content: "";
+  position: absolute;
+  background-color: var(--blue-light);
+  width: 20%;
+  height: 0.2rem;
+  bottom: 0.3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.header-main__menu-list > ul > li:hover::after {
+  opacity: 1;
+  visibility: visible;
+  width: 90%;
+}
+
+/* ========================Level 1 menu */
+.header-main__menu-list > ul > li > ul {
+  position: absolute;
+  background-color: #fff;
+  width: 25rem;
+  right: 0;
+  top: 5.7rem;
+  padding: 1.4rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 14px rgba(5, 81, 81, 0.07);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateY(5rem);
+}
+
+.header-main__menu-list > ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-main__menu-list > ul > li > ul li {
+  padding: 1rem;
+  border-top: 1px solid #efefef;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header-main__menu-list > ul > li > ul li:first-child {
+  border-top-color: transparent;
+}
+
+.header-main__menu-list > ul > li > ul li:hover {
+  background-color: #efefef;
+}
+
+/* ========================Level 2 menu */
+.header-main__menu-list ul > li > ul li ul {
+  position: absolute;
+  width: 25rem;
+  background-color: #fff;
+  right: 106%;
+  top: 0;
+  padding: 1.4rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 14px rgba(5, 81, 81, 0.07);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.header-main__menu-list ul > li > ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ======================== Header Content */
