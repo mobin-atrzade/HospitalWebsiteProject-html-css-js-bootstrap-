@@ -53,7 +53,7 @@ html {
   font-size: 1.5rem;
   color: #fff;
   display: inline-block;
-  padding: 0.7rem 0.4rem 0.6rem 0.4rem;
+  padding: 0.6rem 2rem 0.6rem 0.4rem;
   border-radius: 2rem;
   transition: all 0.3s ease;
 }
@@ -78,6 +78,31 @@ html {
 }
 
 .btn-round a:hover i {
+  background-color: var(--blue-dark-2);
+}
+
+/* ========================== Btn Main */
+
+.btn-main a {
+  background-color: var(--blue-dark);
+  display: inline-block;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-main a span {
+  margin-left: 1.2rem;
+}
+
+.btn-main a i {
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+
+.btn-main a:hover {
   background-color: var(--blue-dark-2);
 }
 
@@ -122,12 +147,21 @@ html {
 
 /* ======================== Header Content */
 .header-main__content {
+  margin-bottom: 7rem;
 }
 .header-main__content-box {
+  background-color: #fff;
+  width: 40%;
+  padding: 2rem 2rem 1rem;
+  border-radius: 7rem 3rem 2rem 2rem;
 }
 .header-main__content-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #001b24;
 }
 .header-main__content-desc {
-}
-.btn-main {
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
