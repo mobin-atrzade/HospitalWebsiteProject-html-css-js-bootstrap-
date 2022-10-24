@@ -148,6 +148,12 @@ html {
 .header-main__menu-list > ul > li:hover > a {
   color: var(--blue-light);
 }
+.header-main__menu-list > ul li i {
+  font-size: 1.1rem;
+  color: #587c8a;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
 .header-main__menu-list > ul > li::after {
   content: "";
   position: absolute;
@@ -165,6 +171,9 @@ html {
   opacity: 1;
   visibility: visible;
   width: 90%;
+}
+.header-main__menu-list > ul > li:hover > a > i {
+  color: var(--blue-light);
 }
 
 /* ========================Level 1 menu */
@@ -202,6 +211,10 @@ html {
 
 .header-main__menu-list > ul > li > ul li:hover {
   background-color: #efefef;
+}
+.header-main__menu-list ul li ul li a i {
+  float: left;
+  line-height: 2rem;
 }
 
 /* ========================Level 2 menu */
