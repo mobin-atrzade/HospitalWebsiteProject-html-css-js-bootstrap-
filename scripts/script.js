@@ -29,3 +29,22 @@ responsive_menu_list.forEach(function (item) {
         })
     }
 })
+
+// Services
+const services_item = document.querySelectorAll('.services__item');
+services_item.forEach(function (service, idx) {
+    service.addEventListener('mouseover', function () {
+        // === Add selected class
+        if (!service.classList.contains('services__item--selected')) {
+            service.classList.add('services__item--selected');
+        }
+        // Remove selected class from siblings
+        services_item.forEach(function (el, index) {
+            if (index !== idx) {
+                if (el.classList.contains('services__item--selected')) {
+                    el.classList.remove('services__item--selected');
+                }
+            }
+        })
+    })
+})

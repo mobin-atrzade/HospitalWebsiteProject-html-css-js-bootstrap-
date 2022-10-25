@@ -450,7 +450,21 @@ html {
 .services__item--selected {
   background: linear-gradient(360deg, #6b63ff 0%, #1799fb 100%);
   z-index: 1;
+  animation: service_item_selected 0.5s ease;
 }
+
+@keyframes service_item_selected {
+  from {
+    opacity: 0.5;
+    border-radius: 30%;
+    transform: skew(1deg, -10deg);
+  }
+  to {
+    opacity: 1;
+    transform: skew(0);
+  }
+}
+
 .services__item--selected::before {
   content: "";
   position: absolute;
