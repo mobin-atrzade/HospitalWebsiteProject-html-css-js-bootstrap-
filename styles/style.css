@@ -353,6 +353,139 @@ html {
   border-right: 2px solid #dee2e6;
 }
 
+/* ========================== Head Info */
+.head-info {
+}
+.head-info__title {
+  font-size: 2rem;
+  color: #1e266d;
+  position: relative;
+  display: inline-block;
+}
+.head-info__title::before {
+  content: "";
+  position: absolute;
+  background-color: var(--blue-light);
+  height: 0.2rem;
+  width: 1.2rem;
+  top: 50%;
+  right: -2.2rem;
+  transform: translateY(-50%);
+}
+.head-info__title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--blue-dark);
+  height: 0.2rem;
+  width: 2.5rem;
+  top: 50%;
+  right: -5rem;
+  transform: translateY(-50%);
+}
+.head-info__desc {
+  font-size: 2.2rem;
+  color: #100221;
+  font-weight: 600;
+  line-height: 3.5rem;
+}
+
+/* ========================== Services Section */
+.services {
+  margin: 6rem 0;
+}
+.services__item {
+  background-color: #fff;
+  box-shadow: 0 4px 40px rgba(182, 185, 255, 0.32);
+  border-radius: 3.2rem;
+  padding: 3.5rem 3rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.services__item-icon {
+  background-color: #f2f9ff;
+  width: 8rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8rem 5rem 12rem 3rem;
+}
+.services__item-icon img {
+  width: 4.5rem;
+}
+.services__item-title {
+  font-size: 1.6rem;
+  color: #262626;
+  font-weight: 600;
+}
+.services__item-desc {
+  font-size: 1.3rem;
+  color: #262626;
+  text-align: justify;
+  line-height: 2.6rem;
+}
+.services__item-link a {
+  background-color: #f2f9ff;
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #662d91;
+  border-radius: 2rem 2rem 2rem 0;
+  position: absolute;
+  bottom: -0.6rem;
+  left: -0.6rem;
+  padding-left: 1rem;
+  padding-bottom: 0.6rem;
+  transition: all 0.3s ease;
+}
+.services__item-link a:hover {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.services__item--selected {
+  background: linear-gradient(360deg, #6b63ff 0%, #1799fb 100%);
+  z-index: 1;
+}
+.services__item--selected::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: 4rem solid rgba(104, 123, 254, 0.24);
+  padding: 4rem;
+  z-index: -2;
+  border-radius: 50%;
+  bottom: -5.5rem;
+  right: -2rem;
+}
+.services__item--selected::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: 2rem solid rgba(104, 123, 254, 0.64);
+  padding: 3rem;
+  z-index: -1;
+  border-radius: 50%;
+  bottom: -3rem;
+  right: -0.4rem;
+}
+.services__item--selected .services__item-title {
+  color: #fff;
+}
+
+.services__item--selected .services__item-desc {
+  color: #fcfaff;
+}
+.services__item--selected .services__item-icon {
+  background-color: rgba(242, 249, 255, 0.15);
+}
+
 /* ***************** Responsive  ***************** */
 
 /* to medium devices (tablets, less than 992px) */
@@ -370,6 +503,29 @@ html {
   }
   .header-main__content-box {
     width: 60%;
+  }
+  /* === Services Responsive */
+  .services__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+  .services__item-icon {
+    width: 20%;
+  }
+  .services__item-title {
+    width: 80%;
+    padding-right: 2rem;
+    font-size: 2rem;
+  }
+  .services__item-desc {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  .services__item-link a {
+    width: 6rem;
+    height: 6rem;
   }
 }
 
@@ -391,5 +547,33 @@ html {
   }
   .header-main__content-box {
     width: 90%;
+  }
+  /* ===  Head Info Responsive*/
+  .head-info__desc {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* === Services Responsive */
+  .services__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+  .services__item-icon {
+    width: 20%;
+  }
+  .services__item-title {
+    width: 80%;
+    padding-right: 2rem;
+    font-size: 2rem;
+  }
+  .services__item-desc {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  .services__item-link a {
+    width: 6rem;
+    height: 6rem;
   }
 }
