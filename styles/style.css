@@ -31,8 +31,10 @@ body {
   box-sizing: border-box;
 }
 
+ol,
 ul {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -104,6 +106,20 @@ html {
 
 .btn-main a:hover {
   background-color: var(--blue-dark-2);
+}
+
+/* ========================== Responsive Btn */
+.responsive-btn {
+  background-color: #efefef;
+  outline: none;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ========================== Header Main  */
@@ -256,4 +272,124 @@ html {
 .header-main__content-desc {
   font-size: 1.5rem;
   line-height: 3rem;
+}
+
+/* ========================== Responsive Menu */
+.responsive-menu__header {
+  background-color: #f6f7f8;
+  border-bottom: 1px solid #d0d7de;
+  height: 6vh;
+  padding: 0 2.5rem;
+}
+.responsive-menu__header .btn-close {
+  font-size: 1.4rem;
+  color: #57606a !important;
+  opacity: 1;
+}
+.responsive-menu__body {
+  height: 100%;
+  overflow-y: scroll;
+}
+.responsive-menu__list > ul > li {
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+.responsive-menu__list > ul > li:last-child {
+  border-bottom: none;
+}
+.responsive-menu__list > ul > li > a {
+  font-size: 1.8rem;
+  color: #242424;
+}
+.responsive-menu__list > ul > li i {
+  background-color: #0098b1;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  float: left;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.responsive-menu__list ul li i.rotate {
+  transform: rotate(180deg);
+}
+.responsive-menu__list > ul > li ul li i {
+  background-color: #adb5bd;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.1rem;
+  margin-top: auto;
+}
+.responsive-menu__list > ul > li ul {
+  background-color: #e9ecef;
+  border-radius: 1rem;
+  margin-top: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.responsive-menu__list > ul > li ul.show {
+  margin-top: 2rem;
+  height: auto;
+  opacity: 1;
+}
+.responsive-menu__list > ul > li ul li {
+  padding: 1.2rem 1rem;
+}
+.responsive-menu__list > ul > li ul li a {
+  font-size: 1.6rem;
+  color: #57606a;
+}
+.responsive-menu__list > ul > li ul li ul {
+  background-color: #f8f9fa;
+  border-right: 2px solid #dee2e6;
+}
+
+/* ***************** Responsive  ***************** */
+
+/* to medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  html {
+    font-size: 9px;
+  }
+  /* ===  Header Main Responsive */
+  .header-main {
+    height: 45rem;
+  }
+  /* ===  Header Main Content Responsive */
+  .header-main__content {
+    margin-bottom: 2rem;
+  }
+  .header-main__content-box {
+    width: 60%;
+  }
+}
+
+/* small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  html {
+    font-size: 8px;
+  }
+  /* ===  Header Main Responsive */
+  .header-main {
+    height: 40rem;
+  }
+  .header-main__menu {
+    padding: 1.3rem;
+  }
+  /* ===  Header Main Content Responsive */
+  .header-main__content {
+    margin-bottom: 0;
+  }
+  .header-main__content-box {
+    width: 90%;
+  }
 }
