@@ -500,12 +500,34 @@ html {
   background-color: rgba(242, 249, 255, 0.15);
 }
 
+/* ========================== About-us Section */
+.about-us {
+  margin: 10rem 0;
+}
+.about-us__pic img {
+  height: 42rem;
+  border-radius: 2rem;
+}
+.about-us__text {
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  text-align: justify;
+}
+.about-us .head-info__desc {
+  width: 50%;
+  line-height: 4rem;
+}
+
 /* ***************** Responsive  ***************** */
 
 /* to medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   html {
     font-size: 9px;
+  }
+  /* === Btn Main Responsive */
+  .btn-main a {
+    font-size: 1.7rem;
   }
   /* ===  Header Main Responsive */
   .header-main {
@@ -518,6 +540,18 @@ html {
   .header-main__content-box {
     width: 60%;
   }
+  .header-main__content-desc {
+    font-size: 1.8rem;
+    line-height: 3.8rem;
+  }
+  /* ===  Head Info Responsive*/
+  .head-info__desc {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .head-info__title::after {
+    right: -5.3rem;
+  }
   /* === Services Responsive */
   .services__item {
     display: flex;
@@ -541,6 +575,19 @@ html {
     width: 6rem;
     height: 6rem;
   }
+  /* === About-us Responsive */
+  .about-us {
+    margin: 5rem 0;
+  }
+  .about-us__pic img {
+    height: 32rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center -18rem;
+  }
+  .about-us .head-info__desc {
+    width: 100%;
+  }
 }
 
 /* small devices (landscape phones, less than 768px) */
@@ -548,9 +595,14 @@ html {
   html {
     font-size: 8px;
   }
+
+  /* === Btn Main Responsive */
+  .btn-main a {
+    font-size: 1.7rem;
+  }
   /* ===  Header Main Responsive */
   .header-main {
-    height: 40rem;
+    height: 44rem;
   }
   .header-main__menu {
     padding: 1.3rem;
@@ -558,6 +610,10 @@ html {
   /* ===  Header Main Content Responsive */
   .header-main__content {
     margin-bottom: 0;
+  }
+  .header-main__content-desc {
+    font-size: 1.8rem;
+    line-height: 3.8rem;
   }
   .header-main__content-box {
     width: 90%;
@@ -567,6 +623,9 @@ html {
     width: 80%;
     margin: 0 auto;
   }
+  .head-info__title::after {
+    right: -5.3rem;
+  }
   /* === Services Responsive */
   .services__item {
     display: flex;
@@ -589,5 +648,21 @@ html {
   .services__item-link a {
     width: 6rem;
     height: 6rem;
+  }
+  /* === About-us Responsive */
+  .about-us {
+    margin: 5rem 0;
+  }
+  .about-us__pic img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .about-us .head-info__desc {
+    width: 80%;
+  }
+  .about-us__text {
+    font-size: 1.8rem;
   }
 }
