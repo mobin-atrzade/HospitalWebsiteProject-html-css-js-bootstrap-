@@ -108,6 +108,42 @@ html {
   background-color: var(--blue-dark-2);
 }
 
+/* ========================== Btn More */
+.btn-more a {
+  font-size: 1.4rem;
+  border: 2px solid var(--blue-dark);
+  padding: 0.6rem 2rem;
+  color: var(--blue-dark);
+  border-radius: 2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-more a:hover {
+  transform: scale(1.2);
+  color: #fff;
+  background-color: var(--blue-dark);
+}
+
+.btn-more a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: var(--blue-dark);
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+.btn-more a:hover::before {
+  opacity: 1;
+  transform: rotate(0);
+}
+
 /* ========================== Responsive Btn */
 .responsive-btn {
   background-color: #efefef;
@@ -518,6 +554,51 @@ html {
   line-height: 4rem;
 }
 
+/* ========================== Articles Section */
+.articles {
+  margin: 3rem 0;
+  padding: 4rem 0 1rem;
+  background: linear-gradient(180deg, #f7fbff 0%, rgba(247, 251, 255, 0) 100%);
+}
+.articles__item {
+  background-color: #fff;
+  box-shadow: 0 20px 20px rgba(220, 226, 255, 0.38);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.articles__item-thumb a {
+  display: block;
+}
+.articles__item-thumb img {
+  width: 100%;
+  object-fit: cover;
+}
+.articles__item-content {
+  padding: 1.5rem 2.5rem 3rem;
+}
+.articles__item-title a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #001b24;
+  transition: color 0.3s ease;
+}
+.articles__item-title a:hover {
+  color: var(--blue-dark);
+}
+.articles__item-text {
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
+.articles__item-link a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  transition: color 0.3s ease;
+}
+.articles__item-link a:hover {
+  color: #001b24;
+}
+
 /* ***************** Responsive  ***************** */
 
 /* to medium devices (tablets, less than 992px) */
@@ -527,6 +608,10 @@ html {
   }
   /* === Btn Main Responsive */
   .btn-main a {
+    font-size: 1.7rem;
+  }
+  /* === Btn More Responsive */
+  .btn-more a {
     font-size: 1.7rem;
   }
   /* ===  Header Main Responsive */
@@ -588,6 +673,42 @@ html {
   .about-us .head-info__desc {
     width: 100%;
   }
+  /* === Articles Responsive */
+  .articles__item {
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
+  .articles__item-thumb {
+    height: 100%;
+  }
+  .articles__item-thumb a {
+    height: 100%;
+  }
+  .articles__item-thumb img {
+    height: 100%;
+    width: 30rem;
+    object-position: center center;
+  }
+  .articles__item-content {
+    padding: 4rem 2.5rem;
+  }
+  .articles__item-title a {
+    font-size: 1.8rem;
+  }
+  .articles__item-text {
+    font-size: 1.5rem;
+  }
+  .articles__item-link a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #001b24;
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 0 2rem 0 0;
+    font-size: 1.5rem;
+  }
 }
 
 /* small devices (landscape phones, less than 768px) */
@@ -598,6 +719,11 @@ html {
 
   /* === Btn Main Responsive */
   .btn-main a {
+    font-size: 1.7rem;
+  }
+
+  /* === Btn More Responsive */
+  .btn-more a {
     font-size: 1.7rem;
   }
   /* ===  Header Main Responsive */
@@ -664,5 +790,41 @@ html {
   }
   .about-us__text {
     font-size: 1.8rem;
+  }
+  /* === Articles Responsive */
+  .articles__item {
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
+  .articles__item-thumb {
+    height: 100%;
+  }
+  .articles__item-thumb a {
+    height: 100%;
+  }
+  .articles__item-thumb img {
+    height: 100%;
+    width: 15rem;
+    object-position: center center;
+  }
+  .articles__item-content {
+    padding: 4rem 2rem;
+  }
+  .articles__item-title a {
+    font-size: 1.8rem;
+  }
+  .articles__item-text {
+    font-size: 1.5rem;
+  }
+  .articles__item-link a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #001b24;
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 0 2rem 0 0;
+    font-size: 1.5rem;
   }
 }
