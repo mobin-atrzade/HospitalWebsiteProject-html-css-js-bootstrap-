@@ -390,8 +390,6 @@ html {
 }
 
 /* ========================== Head Info */
-.head-info {
-}
 .head-info__title {
   font-size: 2rem;
   color: #1e266d;
@@ -724,8 +722,6 @@ html {
   font-size: 1.3rem;
   color: #f34343;
 }
-.videos__item {
-}
 .videos__item-thumb {
   width: 100%;
   height: 20rem;
@@ -736,8 +732,6 @@ html {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-}
-.videos__item-content {
 }
 .videos__item-title a {
   font-size: 1.4rem;
